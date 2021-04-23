@@ -34,7 +34,7 @@ def SecuenciaCorrecta(secuencia):
             return False
     return True
 
-secuencia =  [1,2,3,1]
+secuencia =  [1,2,3,1,3,4]
 
 if SecuenciaCorrecta(secuencia):
     dibujarTablero(completarTableroEnOrden(secuencia,tableroVacio()))
