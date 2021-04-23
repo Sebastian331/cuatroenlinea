@@ -27,7 +27,16 @@ def soltarFichaEnColumna(ficha,columna,tablero):
 def dibujarTablero(tablero):
     for x in tablero:
         print(x)
-                        
+
+def SecuenciaCorrecta(secuencia):
+    for columna in secuencia:
+        if columna < 1 or columna > 7:
+            return False
+    return True
+
 secuencia =  [1,2,3,1]
-dibujarTablero(completarTableroEnOrden(secuencia,tableroVacio()))
-   
+
+if SecuenciaCorrecta(secuencia):
+    dibujarTablero(completarTableroEnOrden(secuencia,tableroVacio()))
+else:
+     print("Las columnas estan compredidas entre el 1 y el 7")  
