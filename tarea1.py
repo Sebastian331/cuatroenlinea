@@ -8,6 +8,13 @@ def tableroVacio():
          [0,0,0,0,0,0,0,],
          ] 
 
+def contenidocolumna(nro_columna, tablero):
+    colunma = []
+    for fila in tablero:
+        celda = fila[nro_columna - 1]
+        colunma.append(celda)
+    return colunma
+
 def completarTableroEnOrden(secuencia, tablero):
     j=0
     for elemento in secuencia:
