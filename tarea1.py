@@ -43,7 +43,11 @@ def SecuenciaCorrecta(secuencia):
 
 secuencia =  [1,2,3,1,3,4]
 
+tablero = []
 if SecuenciaCorrecta(secuencia):
-    dibujarTablero(completarTableroEnOrden(secuencia,tableroVacio()))
+    tablero = completarTableroEnOrden(secuencia,tableroVacio())
+    dibujarTablero(tablero)
 else:
      print("Las columnas estan compredidas entre el 1 y el 7")  
+
+print(contenidocolumna(1,tablero))
