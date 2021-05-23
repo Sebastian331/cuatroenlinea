@@ -11,9 +11,32 @@ def tableroVacio():
 def contenidocolumna(nro_columna, tablero):
     colunma = []
     for fila in tablero:
-        celda = fila[nro_columna - 1]
+        celda = fila [nro_columna - 1]
         colunma.append(celda)
     return colunma
+
+def contenidoFila(nro_fila, tablero):
+    fila = []
+    for celda in tablero [nro_fila - 1]:
+        fila.append(celda)
+    return fila
+
+def todasColumas(tablero):
+    colum_array = []
+    col = []
+    for columna in range(7):
+        for fila in tablero:
+            celda = fila[columna]
+            col.append(celda)
+        colum_array.append(col)
+        col = []
+    return colum_array
+
+def todasFilas(tablero):
+    fil_array = []
+    for fila in tablero:
+        fil_array.append(fila)
+    return fil_array
 
 def completarTableroEnOrden(secuencia, tablero):
     j=0
@@ -51,3 +74,6 @@ else:
      print("Las columnas estan compredidas entre el 1 y el 7")  
 
 print(contenidocolumna(1,tablero))
+print(contenidoFila(6,tablero))
+print(todasColumas(tablero))
+print(todasFilas(tablero))
