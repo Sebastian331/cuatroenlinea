@@ -55,9 +55,17 @@ def soltarFichaEnColumna(ficha,columna,tablero):
             tablero [fila - 1] [columna - 1] = ficha
             return
 
-def dibujarTablero(tablero):
-    for x in tablero:
-        print(x)
+def dibujarTablero (tablero):
+    for fila in range(len(tablero)):
+        for celda in range(len(tablero[0])):
+            if celda == 0:
+                print(' | ',end = '')
+            if celda == 6:
+                print ('|',end = '')
+            else:
+                print(str(tablero[fila][celda]) + ' ', end = '')
+        print('')
+    print(" + - - - - - - + ")
 
 def SecuenciaCorrecta(secuencia):
     for columna in secuencia:
