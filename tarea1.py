@@ -75,14 +75,23 @@ def SecuenciaCorrecta(secuencia):
 
 secuencia =  [1,2,3,1,3,4]
 
+co=1
+fi=6
 tablero = []
 if SecuenciaCorrecta(secuencia):
     tablero = completarTableroEnOrden(secuencia,tableroVacio())
     dibujarTablero(tablero)
+    print("#-----------------------------------------------------------#")
+    print("Contenido de la columna",co)
+    print(contenidocolumna(co,tablero))
+    print("#-----------------------------------------------------------#")
+    print("Contenido de la fila",fi)
+    print(contenidoFila(fi,tablero))
+    print("#-----------------------------------------------------------#")
+    print("Contenido de todas las columnas")
+    print(todasColumas(tablero))
+    print("#-----------------------------------------------------------#")
+    print("Contenido de todas las filas")
+    print(todasFilas(tablero))
 else:
-     print("Las columnas estan compredidas entre el 1 y el 7")  
-
-print(contenidocolumna(1,tablero))
-print(contenidoFila(6,tablero))
-print(todasColumas(tablero))
-print(todasFilas(tablero))
+     print("Las columnas estan compredidas entre el 1 y el 7")
