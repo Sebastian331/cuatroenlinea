@@ -73,7 +73,10 @@ def SecuenciaCorrecta(secuencia):
             return False
     return True
 
-secuencia =  [1,2,3,1,3,4]
+secuencia_texto = input("Ingrese la secuencia de numeros:")
+secuencia =  []
+for items in secuencia_texto.split(','):
+    secuencia.append(int(items))
 
 co=1
 fi=6
